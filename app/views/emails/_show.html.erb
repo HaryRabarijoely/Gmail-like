@@ -3,10 +3,10 @@
   <p><%= @email.body %></p>
   <div id='mail-display-buttons'>
     <%= link_to email_path(@email), data: {:confirm => 'Are you sure?'}, :method => :delete, remote: true  do %>
-      <%= fa_icon "trash-alt", style: "color:orange;"%>
+      <%= fa_icon "trash-alt", style: "color:red;"%>delete
     <% end %>
     <%= link_to email_path(@email,invertRead: true), remote: true, :method => :put do %>
-      <%= fa_icon "trash-alt", style: "color:blue;"%>
+      <%= fa_icon "spell-check", style: "color:blue;"%>unread
     <% end %>
   </div>
 </div>
